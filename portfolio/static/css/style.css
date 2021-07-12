@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+main {
+    flex: 1;
+}
+
+.navbar-nav {
+    flex-direction: row!important;
+    font-size: 15px;
+}
+
+.nav-color {
+    color: black;
+}
+
+.nav-color:hover {
+    color: #DCDCDC;
+}
+
+.nav-color:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #DCDCDC;
+    margin-top: 6px;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-color:hover:after {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.top img {
+    object-fit: cover;
+    height: 500px;
+}
+
+.overlay {
+    position: absolute;
+}
+
+.title {
+    font-size: 3rem;
+    color: black;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: black;
+}
+
+.work-thumbnail {
+    overflow: hidden;
+    position: relative;
+    filter: drop-shadow(5px 5px 5px #aaa);
+}
+
+.work-img {
+    object-fit: cover;
+    height: 240px;
+}
+
+.work-title {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    /* font-weight: bold; */
+    padding: 10px 15px;
+    opacity: 0;
+    background-color: rgb(169, 169, 169, 0.8);
+    transform: translateY(70px);
+    transition: all 0.2s ease-in-out;
+}
+
+.work-thumbnail:hover .work-title {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.link-color {
+    color: #EE6C4D;
+}
+
+.link-color:hover {
+    color: #c56c55;
+    text-decoration: none;
+}
+
+.avatar img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.icon {
+    padding: 10px 8px;
+}
+
+.star-rating {
+    position: relative;
+    font-size: 20px;
+    word-wrap: normal !important;
+}
+
+.star-rating-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: #ffd800;
+}
+
+.star-rating-back {
+    color: #ccc;
+}
+
+/* contact */
+
+.contact {
+    max-width: 500px;
+}
+
+.form-control:focus {
+    border-color: #EE6C4D;
+    box-shadow: none;
+}
+
+.card {
+    border: none;
+}
