@@ -2,20 +2,21 @@
 
 {% block content %}
 
-<h3 class="mb-4">{{ work_data.title }}</h3>
+<h3 class="my-4 font-weight-bolder">{{ work_data.title }}</h3>
 <div class="card top mb-4">
-    <img src="{{ work_data.image.url }}" alt="">
+    <img src="{{ work_data.image.url }}" alt="" class="w-100 h-100">
 </div>
 
 <div class="row">
     <div class="col-sm-4 mb-4">
-        <h4 class="mb-3">INFORMATION</h4>
+        <h4 class="my-3">Information</h4>
+        <hr class="mb-4">
         <p>
             <i class="fas fa-laptop-code mr-2"></i>
             <span class="font-weight-bolder">SKILLS:</span>
             {{ work_data.skill }}
         </p>
-        <hr>
+
         <p>
             <i class="fab fa-github mr-2"></i>
             <span class="font-weight-bolder">GITHUB:</span>
@@ -25,24 +26,25 @@
                 Private
             {% endif %}
         </p>
-        <hr>
+
         {% if work_data.link %}
           <p>
             <i class="fas fa-link mr-2"></i>
             <span class="font-weight-bolder">Link:</span>
             <a href="{{ work_data.link }}" target="_blank" class="link-color">Click Here</a>
           </p>
-          <hr>
+
         {% endif %}
         <p>
             <i class="far fa-calendar-alt mr-2"></i>
             <span class="font-weight-bolder">CREATED:</span>
             {{ work_data.created }}
         </p>
-        <hr>
+
     </div>
     <div class="col-sm-8 mb-5">
-        <h4 class="mb-3">PROJECT DESCRIPTION</h4>
+        <h4 class="my-3">Project Description</h4>
+        <hr class="mb-4">
         <p>{{ work_data.description|linebreaksbr }}</p>
     </div>
 </div>

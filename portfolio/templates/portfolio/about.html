@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<h3 class="mb-4">Profile</h3>
+<h3 class="my-4 font-weight-bolder">Profile</h3>
 <div class="mb-5">
     <div class="row">
         <div class="col-md-8">
             <p>{{ profile_data.introduction|linebreaksbr }}</p>
         </div>
         <div class="col-md-4">
-            <div class="card text-center px-5 py-4">
+            <div class="card text-center px-5 py-4 bg-white">
                 <div class="avatar mb-3">
                     <img src="{{ profile_data.subimage.url }}" alt="" class="card-img-top rounded-circle">
                 </div>
@@ -17,10 +17,20 @@
                 <p class="mb-3 small text-center">{{ profile_data.job|linebreaksbr }}</p>
                 <div class="d-flex justify-content-around">
                     {% if profile_data.github %}
-                        <a href="{{ profile_data.github }}" target="_blank"><i class="fab fa-github fa-lg rounded btn-dark icon"></i></a>
+                        <a
+                            href="{{ profile_data.github }}"
+                            target="_blank"
+                            class="btn btn-dark rounded-circle"
+                            style="background-color: #333333;"
+                        ><i class="fab fa-github"></i></a>
                     {% endif %}
                     {% if profile_data.twitter %}
-                        <a href="{{ profile_data.twitter }}" target="_blank"><i class="fab fa-github fa-lg rounded btn-primary icon"></i></a>
+                        <a
+                            href="{{ profile_data.twitter }}"
+                            target="_blank"
+                            class="btn btn-info rounded-circle"
+                            style="background-color: #55acee;"
+                        ><i class="fab fa-twitter"></i></a>
                     {% endif %}
                 </div>
             </div>
@@ -28,20 +38,19 @@
     </div>
 </div>
 
-<h3 class="mb-4">Experience</h3>
+<h3 class="my-4 font-weight-bolder">Experience</h3>
 <div class="mb-5">
     {% for experience in experience_data %}
         <div class="d-flex justify-content-between">
-            <h5>{{ experience.occupation }}<span class="small text-secondary"> - {{ experience.company }}</span> </h5>
+            <h5 class="mb-3">{{ experience.occupation }}<span class="small text-secondary"> - {{ experience.company }}</span> </h5>
             <p class="mb-1">{{ experience.period }}</p>
         </div>
         <p class="mb-1">{{ experience.description|linebreaksbr }}</p>
-        <p>{{ experience.place }}</p>
         <hr>
     {% endfor %}
 </div>
 
-<h3 class="mb-4">Education</h3>
+<h3 class="my-4 font-weight-bolder">Education</h3>
 <div class="mb-5">
     {% for education in education_data %}
         <div class="d-flex justify-content-between">
@@ -53,7 +62,7 @@
     {% endfor %}
 </div>
 
-<h3 class="mb-4">Skills</h3>
+<h3 class="my-4 font-weight-bolder">Skills</h3>
 <div class="mb-5">
     <div class="row">
         {% for skill in skill_data %}
@@ -72,7 +81,7 @@
     <hr>
 </div>
 
-<h3 class="mb-5">Hobbies</h3>
+<h3 class="my-4 font-weight-bolder">Hobbies</h3>
 <div class="mb-5">
     <div class="row">
         {% for hobby in hobby_data %}

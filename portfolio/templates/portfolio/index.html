@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="card top d-flex flex-column justify-content-end mb-4">
-    <img src="{{ profile_data.topimage.url }}" alt="">
-    <div class="overlay text-white p-5">
+    <img src="{{ profile_data.topimage.url }}" alt="" class="shadow p-3">
+    <div class="overlay p-5">
         <h1 class="title">{{ profile_data.title }}</h1>
         <h5 class="subtitle">{{ profile_data.subtitle }}</h5>
     </div>
@@ -14,9 +14,9 @@
         <div class="col-6 col-md-3 mb-3">
             <div class="card work-thumbnail">
                 {% if work.thumbnail %}
-                    <img src="{{ work.thumbnail.url }}" alt="" class="work-img">
+                    <img src="{{ work.thumbnail.url }}" alt="" class="work-img w-100 h-100">
                 {% else %}
-                    <img src="{{ work.image.url }}" alt="" class="work-img">
+                    <img src="{{ work.image.url }}" alt="" class="work-img w-100 h-100">
                 {% endif %}
                 <div class="work-title text-center">
                     <p class="mb-0">
